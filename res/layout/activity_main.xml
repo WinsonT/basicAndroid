@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ListView
+        android:id="@android:id/list"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/hello" />
+    <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <EditText android:id="@+id/edit_message"
+	        android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:hint="@string/edit_message" />
+	    <Button
+	        android:id="@+id/send_message"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/button_send" 
+	        android:onClick="sendMessage"/>
+	    <Button
+	        android:id="@+id/view_stats"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/button_stats" 
+	        android:onClick="viewStats"/>
+	</LinearLayout>
+    <LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+    	style="?android:attr/buttonBarStyle">
+	    <Button
+	        style="?android:attr/buttonBarButtonStyle"
+	        android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/button_rock"
+	        android:onClick="sendRock"
+	        />
+	    <Button
+	        style="?android:attr/buttonBarButtonStyle"
+	        android:layout_weight="1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:text="@string/button_paper" 
+	        android:onClick="sendPaper"/>
+    	<Button
+	        style="?android:attr/buttonBarButtonStyle"
+	        android:layout_weight="1"
+	        android:layout_width="0dp"
+    	    android:layout_height="wrap_content"
+        	android:text="@string/button_scissors" 
+        	android:onClick="sendScissors"/>
+    </LinearLayout>
+</LinearLayout>
